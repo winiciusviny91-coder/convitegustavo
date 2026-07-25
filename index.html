@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Convite Mágico - Aventura do Gustavo</title>
+
+  <!-- Fonte Especial: Luckiest Guy & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       TELA 1: CAPA INTERATIVA
+       ========================================== -->
+  <div id="tela1" class="tela ativo" onclick="abrirConvite()">
+    <div class="capa-container">
+        </div>
+  </div>
+
+  <!-- ==========================================
+       TELA 2: CONVITE PRINCIPAL DINO BABY
+       ========================================== -->
+  <div id="tela2" class="tela">
+    
+    <!-- OVERLAY ESCURO PARA REALÇAR CONTEÚDO -->
+    <div class="overlay-fundo"></div>
+
+    <div class="conteudo-convite">
+
+      <!-- HEADER: PLAQUINHA DE MADEIRA + TÍTULOS 3D -->
+      <header class="header-titulos">
+        
+        <!-- Plaquinha de Madeira 3D -->
+        <div class="placa-madeira-wrapper">
+          <div class="corda-pendurada"></div>
+          <div class="placa-madeira">
+            <span class="parafuso parafuso-esq"></span>
+            <span class="parafuso parafuso-dir"></span>
+            <span class="dino-icone">🦕</span>
+            <span class="placa-texto">UMA GRANDE AVENTURA!</span>
+          </div>
+        </div>
+
+        <!-- Nome Principal: GUSTAVO (Efeito 3D Multicamadas) -->
+        <h1 class="nome-gustavo">GUSTAVO</h1>
+
+        <!-- Subtítulo: FAZ 1 ANINHO! -->
+        <div class="linha-idade">
+          <span class="palavra-faz">FAZ</span>
+          <span class="numero-um">1</span>
+          <span class="palavra-aninho">ANINHO!</span>
+        </div>
+
+      </header>
+
+      <!-- CARD GLASSMORPHISM DE INFORMAÇÕES -->
+      <section class="card-glass">
+        <div class="info-item">
+          <span class="info-icone">📅</span>
+          <div class="info-conteudo">
+            <span class="info-label">DATA</span>
+            <span class="info-valor">14/11/2026</span>
+          </div>
+        </div>
+
+        <div class="divisor-glass"></div>
+
+        <div class="info-item">
+          <span class="info-icone">⏰</span>
+          <div class="info-conteudo">
+            <span class="info-label">HORÁRIO</span>
+            <span class="info-valor">16:00h</span>
+          </div>
+        </div>
+
+        <div class="divisor-glass"></div>
+
+        <div class="info-item info-local">
+          <span class="info-icone">📍</span>
+          <div class="info-conteudo">
+            <span class="info-label">LOCAL</span>
+            <span class="info-valor destaque-local">Espaço Ponto Verde</span>
+            <span class="info-subtext">Rua do Oriente, N°:56 - Alto do Peru</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESPAÇADOR ESTRATÉGICO PARA MANTER ROSTO DO BEBÊ VISÍVEL -->
+      <div class="espaco-visibilidade-bebe"></div>
+
+      <!-- ÁREA DE BOTÕES DE AÇÃO -->
+      <footer class="area-botoes">
+        <button class="btn btn-confirmar" onclick="event.stopPropagation(); confirmarPresenca()">
+          <span class="btn-brilho-superior"></span>
+          <span class="btn-texto">🦖 CONFIRMAR PRESENÇA</span>
+        </button>
+
+        <!-- BOTÃO: SUGESTÕES DE PRESENTE -->
+        <button class="btn btn-presentes" onclick="event.stopPropagation(); verPresentes()">
+          <span class="btn-brilho-superior"></span>
+          <span class="btn-texto">🎁 SUGESTÕES DE PRESENTE</span>
+        </button>
+        
+        <button class="btn btn-voltar" onclick="event.stopPropagation(); voltarInicio()">
+          <span class="btn-texto">⬅️ Voltar</span>
+        </button>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- ==========================================
+       TELA 3: SUGESTÕES DE PRESENTE
+       ========================================== -->
+  <div id="tela3" class="tela">
+    
+    <!-- Overlay leve para destacar a imagem Sugestao.jpg sem escurecer os dinossauros -->
+    <div class="overlay-fundo-suave"></div>
+    
+    <div class="conteudo-presentes">
+      
+      <!-- HEADER DA TELA 3 -->
+      <header class="header-titulos">
+        <div class="placa-madeira-wrapper">
+          <div class="corda-pendurada"></div>
+          <div class="placa-madeira">
+            <span class="parafuso parafuso-esq"></span>
+            <span class="parafuso parafuso-dir"></span>
+            <span class="dino-icone">🎁</span>
+            <span class="placa-texto">SUGESTÕES DE PRESENTES</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- CARDS INDIVIDUAIS ESTILO PLAQUINHA DE MADEIRA -->
+      <section class="container-sugestoes">
+        
+        <div class="card-item-madeira">
+          <span class="parafuso parafuso-esq"></span>
+          <span class="parafuso parafuso-dir"></span>
+          <span class="icone-presente">🧩</span>
+          <span class="texto-presente">Brinquedos educativos</span>
+        </div>
+
+        <div class="card-item-madeira">
+          <span class="parafuso parafuso-esq"></span>
+          <span class="parafuso parafuso-dir"></span>
+          <span class="icone-presente">📚</span>
+          <span class="texto-presente">Livros infantis</span>
+        </div>
+
+        <div class="card-item-madeira">
+          <span class="parafuso parafuso-esq"></span>
+          <span class="parafuso parafuso-dir"></span>
+          <span class="icone-presente">👕</span>
+          <span class="texto-presente">Roupas a partir do tamanho 3 anos</span>
+        </div>
+
+        <div class="card-item-madeira">
+          <span class="parafuso parafuso-esq"></span>
+          <span class="parafuso parafuso-dir"></span>
+          <span class="icone-presente">👟</span>
+          <span class="texto-presente">Calçados a partir do tamanho 22</span>
+        </div>
+
+      </section>
+
+      <!-- ESPAÇADOR PARA MANTER OS DINOSSAUROS DA ARTE VISÍVEIS -->
+      <div class="espaco-visibilidade-bebe"></div>
+
+      <!-- BOTÃO VOLTAR -->
+      <footer class="area-botoes">
+        <button class="btn btn-voltar" onclick="event.stopPropagation(); voltarConvite()">
+          <span class="btn-texto">⬅️ Voltar ao Convite</span>
+        </button>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
